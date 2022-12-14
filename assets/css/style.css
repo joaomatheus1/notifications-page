@@ -6,10 +6,11 @@ body {
     height: 100%;
     background-color: #f9fafe;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
 }
 
 .container_notifications {
-    max-width: 900px;
+    max-width: 992px;
     margin: 0 auto;
     border-radius: 5px;
     background-color: #ffffff;
@@ -27,7 +28,7 @@ body {
     align-items: center;
     gap: 1rem;
 }
-.amount_notifications .amount {
+.amount_notifications .amount-unread {
     padding: 0.2rem 0.7rem;
     background-color: #0c357b;
     border-radius: 5px;
@@ -44,4 +45,56 @@ button.mark_read {
 }
 button.mark_read:hover {
     text-decoration: underline;
+}
+
+.body-notification {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.item-notification.unread {
+    background-color: #f6fafd;
+    border: 1px solid rgb(237, 244, 255);
+}
+.item-notification {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.profile-icon img {
+    width: 50px;
+    height: 50px;
+}
+.content-notification {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.text-notification {
+    margin: 0;
+    color: #86888d;
+}
+.text-notification .user {
+    color: #000;
+    font-weight: 700;
+}
+.time {
+    color: #a7abb3;
+}
+.private-mensage {
+    border: 1px solid #bcbfc6;
+    border-radius: 5px;
+    padding: 1rem;
+    color: #86888d;
+}
+
+
+
+@media (min-width: 992px) {
+    .container_notifications {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
 }
