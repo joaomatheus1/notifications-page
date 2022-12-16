@@ -1,7 +1,9 @@
 const markAllAsRead = document.querySelectorAll(".item-notification");
+
 let amoutUnread = document.querySelector("#count_notifications");
 let cont = markAllAsRead.length;
 let containsClass = 0;
+
 markAllAsRead.forEach((item) => {
   item.addEventListener("click", () => {
     if (item.classList.contains("read")) {
@@ -14,6 +16,7 @@ markAllAsRead.forEach((item) => {
     containsClass++;
   }
 });
+
 amoutUnread.innerHTML = containsClass;
 
 function clearNotifications() {
