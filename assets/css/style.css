@@ -52,10 +52,13 @@ button.mark_read:hover {
   flex-direction: column;
   gap: 1rem;
 }
-.item-notification.unread {
+
+.read {
   background-color: #f6fafd;
   border: 1px solid rgb(237, 244, 255);
+  cursor: pointer;
 }
+
 .item-notification {
   display: flex;
   align-items: flex-start;
