@@ -4,6 +4,10 @@ let cont = markAllAsRead.length;
 let containsClass = 0;
 markAllAsRead.forEach((item) => {
   item.addEventListener("click", () => {
+    if (item.classList.contains("read")) {
+      containsClass--;
+      amoutUnread.innerHTML = containsClass;
+    }
     item.classList.remove("read");
   });
   if (item.classList.contains("read")) {
@@ -15,7 +19,7 @@ amoutUnread.innerHTML = containsClass;
 function clearNotifications() {
   markAllAsRead.forEach((item) => {
     item.classList.remove("read");
-    containsClass--;
-    console.log(containsClass);
+    containsClass = 0;
+    amoutUnread.innerHTML = containsClass;
   });
 }
