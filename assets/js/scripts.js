@@ -1,28 +1,28 @@
 const markAllAsRead = document.querySelectorAll(".item-notification");
 
-let amoutUnread = document.querySelector("#count_notifications");
-let cont = markAllAsRead.length;
-let containsClass = 0;
+let amountUnread = document.querySelector("#count_notifications");
+let markRead = markAllAsRead.length;
+let count = 0;
 
 markAllAsRead.forEach((item) => {
   item.addEventListener("click", () => {
     if (item.classList.contains("read")) {
-      containsClass--;
-      amoutUnread.innerHTML = containsClass;
+      count--;
+      amountUnread.innerHTML = count;
     }
     item.classList.remove("read");
   });
   if (item.classList.contains("read")) {
-    containsClass++;
+    count++;
   }
 });
 
-amoutUnread.innerHTML = containsClass;
+amountUnread.innerHTML = count;
 
 function clearNotifications() {
   markAllAsRead.forEach((item) => {
     item.classList.remove("read");
-    containsClass = 0;
-    amoutUnread.innerHTML = containsClass;
+    count = 0;
+    amountUnread.innerHTML = count;
   });
 }
