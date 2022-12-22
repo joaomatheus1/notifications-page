@@ -1,3 +1,5 @@
+# Hello, this is a front-end mentor challenge, so full credits to the platform 😄
+
 # Frontend Mentor - Notifications page
 
 ![Design preview for the Notifications page coding challenge](./design/desktop-preview.jpg)
